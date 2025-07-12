@@ -32,7 +32,7 @@ function CreateMain(title)
 	Title.BackgroundTransparency = 0.350
 	Title.BorderSizePixel = 0
 	Title.Size = UDim2.new(0, 193, 0, 27)
-	Title.Font = Enum.Font.Gotham
+	Title.Font = Enum.Font.Code
 	Title.Text = " "..title
 	Title.TextColor3 = Color3.fromRGB(0, 255, 0)
 	Title.TextSize = 14.000
