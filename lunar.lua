@@ -1,4 +1,4 @@
-function CreateMain(title)
+function CreateMain(title, color)
 	local destroyIfExist = game.CoreGui:GetChildren()
 	for index, destroyIfExist in pairs(destroyIfExist) do
 		if destroyIfExist.Name == title then
@@ -33,7 +33,7 @@ function CreateMain(title)
 	Title.Size = UDim2.new(0, 193, 0, 27)
 	Title.Font = Enum.Font.JosefinSans
 	Title.Text = " "..title
-	Title.TextColor3 = Color3.fromRGB(0, 255, 0)
+	Title.TextColor3 = color
 	Title.TextSize = 14.000
 	Title.TextXAlignment = Enum.TextXAlignment.Left
 
