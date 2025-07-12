@@ -5,19 +5,19 @@ function CreateMain(title)
 			destroyIfExist:Destroy()
 		end
 	end
-	local Lunar = Instance.new("ScreenGui")
+	local Rodus = Instance.new("ScreenGui")
 	local Top = Instance.new("Frame")
 	local Title = Instance.new("TextLabel")
 	local Container = Instance.new("Frame")
 	local UIListLayout = Instance.new("UIListLayout")
 	local Minimize = Instance.new("TextButton")
 
-	Lunar.Name = tostring(title)
-	Lunar.Parent = game:WaitForChild("CoreGui")
-	Lunar.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	Rodus.Name = tostring(title)
+	Rodus.Parent = game:WaitForChild("CoreGui")
+	Rodus.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	Top.Name = "Top"
-	Top.Parent = Lunar
+	Top.Parent = Rodus
 	Top.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 	Top.BackgroundTransparency = 0.500
 	Top.BorderColor3 = Color3.fromRGB(0, 0, 0)
