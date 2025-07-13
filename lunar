@@ -1,28 +1,37 @@
-local function CreateWindow(title)
+local Library = {}
+
+function Library:CreateWindow(title)
+    -- Services
     local CoreGui = game:GetService("CoreGui")
 
+    -- Create ScreenGui
     local screenGui = Instance.new("ScreenGui")
-    screenGui.Name = "ExploitGui_" .. title:gsub("%s+", "")
+    screenGui.Name = "LunarGui_" .. title:gsub("%s+", "")
     screenGui.ResetOnSpawn = false
-    screenGui.Parent = CoreGui
+    pcall(function() screenGui.Parent = CoreGui end)
 
+    -- Create Main Frame
     local mainFrame = Instance.new("Frame")
-    mainFrame.Size = UDim2.new(0, 300, 0, 200)
-    mainFrame.Position = UDim2.new(0.5, -150, 0.5, -100)
-    mainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    mainFrame.Size = UDim2.new(0, 350, 0, 250)
+    mainFrame.Position = UDim2.new(0.5, -175, 0.5, -125)
+    mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     mainFrame.BorderSizePixel = 0
     mainFrame.Active = true
     mainFrame.Draggable = true
     mainFrame.Parent = screenGui
 
+    -- Title Bar
     local titleBar = Instance.new("TextLabel")
-    titleBar.Size = UDim2.new(1, 0, 0, 30)
-    titleBar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+    titleBar.Size = UDim2.new(1, 0, 0, 35)
+    titleBar.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
     titleBar.TextColor3 = Color3.fromRGB(255, 255, 255)
-    titleBar.Text = title
-    titleBar.Font = Enum.Font.SourceSansBold
+    titleBar.Font = Enum.Font.GothamBold
     titleBar.TextSize = 18
+    titleBar.Text = title
+    titleBar.Name = "TitleBar"
     titleBar.Parent = mainFrame
 
     return mainFrame
 end
+
+return Library
